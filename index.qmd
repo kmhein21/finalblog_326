@@ -1,0 +1,14 @@
+---
+title: "finalblog_326"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+
+Collection of all the Mini-Projects done in STAT 326: Mathematical Statistics and a reflection containing takeaways and connections between them

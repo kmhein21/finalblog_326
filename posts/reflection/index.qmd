@@ -1,0 +1,41 @@
+---
+title: "Final Reflection"
+---
+
+Reflection should include:
+
+\* how each one ties into class content
+
+All of the mini-projects that we had in this course tie directly into the specific sections that they were designed to follow. After each completion of a section, the mini-project helped solidify theoretical ideas which related to the main themes of the course. There are aspects though where we see the mini-projects connecting through the sections too, and looking back at all the coursework we can see how certain projects had us prepare for certain sections or return to ideas from previous sections. 
+
+mini-project 1 
+
+Mini-project 2 connected to a variety of course sections we completed. This mini-project had to do with solidifying our understanding of important vocabulary which we had seen in section 1 and which ended up returning in section 3 and 5. Through understanding these words, we were able to create a foundation which could be expanded upon as we worked through the course. (EXPLAIN SPECIFIC WORDS WHICH CAME BACK OR VERY IMPORTANT CONCEPTS) Naturally, this mini-project heavily connected to section 2 on estimation, where we derived a lot of estimators and estimates for different distributions. 
+
+
+Mini-project 3 connected specifically to the section based on confidence intervals, but it also had some overlap with section 5 on hypothesis testing. In this mini-project, we saw ways that the intervals would vary when given different parameters (proportion and sample size). This expanded on the notes and examples we worked through in section 3, but it incorporated statistical simulation. This mini-project connected to the section on hypothesis testing because it had to do with the idea of breaking/meeting assumptions, and how this could alter the accuracy of our interpretations. In hypothesis testing, confidence intervals can be used to understand results and making sure that assumptions are met are vital in creating test statistics. 
+
+
+Mini-project 4 was unique, as it really only connected to the section 4 coursework. This section was different because it focused specifically on Bayesian statistics, and not frequentist statistics like all of the other sections. During this section, we focused on deriving posterior distributions from various prior distributions. These prior distributions were either non-informative or were created using a priori knowledge. Mini-project 4 directly relates to this idea as we used various informative and non-informative priors to display how they altered the posterior distribution. Another way that this connected was through the creation of informative priors, which we could make based on knowledge from 'experts' and this was done in both our section coursework and the mini-project. 
+
+mini-project 5
+
+\* how they connect to eachother
+
+Not only do these projects connect to the course material, but we can see ways in which the min-projects connect to eachother. 
+
+mini-project 1 
+mini-project 2
+mini-project 3
+mini-project 4
+mini-project 5
+
+\* biggest takeaways from the projects 
+
+Each of these mini-projects had valuable lessons which applied to our coursework, but there were specific things that I took away from them. 
+
+mini-project 1: 
+
+The biggest takeaway that I took from the second mini-project is a little less theoretical. By writing this meaningful story I was able to work all of the vocab words together, and this helped strengthen my understanding of what they really mean (aside from a strict definition). The biggest takeaway that I took from the third mini-project relates to how broken assumptions will affect confidence intervals. When these assumptions are broken it can alter the width and coverage rate of the interval, which then affects the accuracy of your confidence interval interpretation. The biggest takeaway that I took from the fourth mini-project relates to how Bayesian statistics differs from frequentist statistics. Through this, mini-project I learned how influential the prior distribution is to the posterior distribution, and that by using different prior distributions you can create entirely different posterior distributions (which will then affect your conclusions). (MENTION HOW FREQUENTIST AND BAYESIAN DIFFER IN CONNECTION SECTION) Lastly, the takeaway that I had from the fifth mini-project is that the reliance we have on p-values and confidence intervals is misguided and actually is limiting the scope of scientific research. From this paper, I learned the dangers of the strict division that significance contributes to research studies, and I also learned some opinions on how we should try to change this and approach results in a different way. 
+
+
