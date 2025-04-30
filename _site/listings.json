@@ -1,0 +1,15 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/02-meaningful-story/index.html",
+      "/posts/04-bayesian/index.html",
+      "/posts/01-simulation /index.html",
+      "/posts/03-confidence-intervals/index.html",
+      "/posts/05-hypothesis-testing/index.html",
+      "/posts/reflection/index.html",
+      "/posts/post-with-code/index.html",
+      "/posts/welcome/index.html"
+    ]
+  }
+]
