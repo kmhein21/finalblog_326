@@ -2,7 +2,7 @@
 title: "Simulation to Investigate Confidence Intervals "
 ---
 
-## Goal of this Project: 
+## Goal of this Project:
 
 Explore what happens to Confidence Intervals when assumptions are not met.
 
@@ -28,18 +28,19 @@ n(p) \> 10
 n(1-p) \> 10
 
 |   n(p)    |   n = 5    |         n = 30          |          n = 500          |     |
-|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
+|:---------:|:----------:|:-----------------------:|:-------------------------:|:---:|
 | $p = 0.6$ | 0.6(5) = 3 | $\textbf{0.6(30) = 18}$ | $\textbf{0.6(500) = 300}$ |     |
 | $p = 0.2$ | 0.2(5) = 1 |       0.2(30) = 6       | $\textbf{0.2(500) = 100}$ |     |
 
 |  n(1-p)   |   n = 5    |         n = 30          |          n = 500          |     |
-|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
+|:---------:|:----------:|:-----------------------:|:-------------------------:|:---:|
 | $p = 0.6$ | 0.4(5) = 2 | $\textbf{0.4(30) = 12}$ | $\textbf{0.4(500) = 200}$ |     |
 | $p = 0.2$ | 0.8(5) = 4 |      0.8(30) = 24       | $\textbf{0.8(500) = 400}$ |     |
 
 From these tables we can see that 3 of the settings pass the "large sample" assumption, and three do not. The three that do pass the assumption are in bold in the table.
 
 ## Code for simulations!
+
 For my simulations I reran the code below and just changed the n and p values
 
 ```{r}
@@ -75,20 +76,18 @@ prop_ci_df|> mutate(width = ub - lb,
 
 ### Table of results
 
-|           |               | n = 5 | n = 30  | n = 500 |
-|:---------:|:-------------:|:-----:|:-------:|:-------:|
-| $p = 0.6$ | Coverage Rate | 0.825 | 0.862 |  0.904  |
-| $p = 0.2$ | Coverage Rate | 0.614 |  0.855  |  0.898  |
-|           |               |       |         |         |
-| $p = 0.6$ | Average Width | 0.608 |  0.288  | 0.0718  |
-| $p = 0.2$ | Average Width | 0.430 |  0.234  | 0.0586  |
+|           |               | n = 5 | n = 30 | n = 500 |
+|:---------:|:-------------:|:-----:|:------:|:-------:|
+| $p = 0.6$ | Coverage Rate | 0.825 | 0.862  |  0.904  |
+| $p = 0.2$ | Coverage Rate | 0.614 | 0.855  |  0.898  |
+|           |               |       |        |         |
+| $p = 0.6$ | Average Width | 0.608 | 0.288  | 0.0718  |
+| $p = 0.2$ | Average Width | 0.430 | 0.234  | 0.0586  |
 
 ### Summary of my findings
 
-In my table of results the first thing that I am drawn to is the difference in average width across the settings. I can see that as n increases the width of my confidence intervals narrow, with the average width getting smaller. This makes sense, as we increase the amount of observations we have we can get a better understanding of where the value will truly lie, allowing us to decrease the width of our interval. I can also see that the average widths are a bit wider at my higher p value than at the lower value. This change is not very large but potentially something to note. We can really see this pattern at n = 5, where the width differs between the two "p" values by about 0.17. It is not as clear to me why this would be the case, but perhaps because the value varies from 0.5 and has such a small n, something happens to the precision of the CIs. 
+In my table of results the first thing that I am drawn to is the difference in average width across the settings. I can see that as n increases the width of my confidence intervals narrow, with the average width getting smaller. This makes sense, as we increase the amount of observations we have we can get a better understanding of where the value will truly lie, allowing us to decrease the width of our interval. I can also see that the average widths are a bit wider at my higher p value than at the lower value. This change is not very large but potentially something to note. We can really see this pattern at n = 5, where the width differs between the two "p" values by about 0.17. It is not as clear to me why this would be the case, but perhaps because the value varies from 0.5 and has such a small n, something happens to the precision of the CIs.
 
-Looking at the coverage rates, I can see that at the n=500 settings the coverage rates were around 90%, as expected! At n = 30, the rates are lower but very similar, falling at 86.2% and 85.5%. This is interesting to me because I would have assumed that the setting n = 30 and p = 0.6 would have a rate close to 90%, since it met the "large sample" assumption. Lastly, the n=5 coverage rates, which differ greatly based on the proportion they were given. For the higher p value close to 0.5, the n=5 did not do a horrible job with a rate of 82.5%, however this is much lower than we would expect for a 90% confidence interval. For the p=0.2 and n=5 condition we can see that this simulations confidence intervals did not do well at all, with a coverage rate of 61.4%. 
+Looking at the coverage rates, I can see that at the n=500 settings the coverage rates were around 90%, as expected! At n = 30, the rates are lower but very similar, falling at 86.2% and 85.5%. This is interesting to me because I would have assumed that the setting n = 30 and p = 0.6 would have a rate close to 90%, since it met the "large sample" assumption. Lastly, the n=5 coverage rates, which differ greatly based on the proportion they were given. For the higher p value close to 0.5, the n=5 did not do a horrible job with a rate of 82.5%, however this is much lower than we would expect for a 90% confidence interval. For the p=0.2 and n=5 condition we can see that this simulations confidence intervals did not do well at all, with a coverage rate of 61.4%.
 
-Looking at these results I can make some conclusions about the ways that parameters may influence confidence intervals. As mentioned above I can see that as you increase n, the confidence intervals will become more narrow. Based on the n=5 settings I can also see by looking at both coverage rate and average interval width that failing both of the assumptions will lead to a poor coverage rate and a wide interval (especially when the proportion value differs from 0.5). Another conclusion I would suggest is that a "p" value which differs from 0.5 greatly will result in narrower intervals, which can be seen in the last row of my results table. Lastly, another conclusion I would suggest is that if the n value is large enough, the lower "p" value will not be able to affect the intervals as strongly. I make this assumption because i can see that the n=30 and p=0.2 condition preformed similarly to the n=30 & p=0.6 condition, even though the former failed the "large sample" assumption. 
-
-
+Looking at these results I can make some conclusions about the ways that parameters may influence confidence intervals. As mentioned above I can see that as you increase n, the confidence intervals will become more narrow. Based on the n=5 settings I can also see by looking at both coverage rate and average interval width that failing both of the assumptions will lead to a poor coverage rate and a wide interval (especially when the proportion value differs from 0.5). Another conclusion I would suggest is that a "p" value which differs from 0.5 greatly will result in narrower intervals, which can be seen in the last row of my results table. Lastly, another conclusion I would suggest is that if the n value is large enough, the lower "p" value will not be able to affect the intervals as strongly. I make this assumption because i can see that the n=30 and p=0.2 condition preformed similarly to the n=30 & p=0.6 condition, even though the former failed the "large sample" assumption.

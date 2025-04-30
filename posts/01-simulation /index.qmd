@@ -2,9 +2,7 @@
 title: "Sampling Distribution of Min and Max"
 ---
 
-### Goal of this project: 
-
-
+### Goal of this project:
 
 ### Statement of integrity:
 
@@ -108,8 +106,6 @@ ggplot(data = maxs_df_norm, aes(x = maxs_norm)) +
        title = paste("Sampling Distribution of the \nSample Max when n =", n))
 ```
 
-
-
 ### Unif(7,13)
 
 ```{r}
@@ -172,7 +168,6 @@ ggplot(data = maxs_df_unif, aes(x = maxs_unif)) +
   labs(x = "Observed Sample Maxs",
        title = paste("Sampling Distribution of the \nSample Max when n =", n))
 ```
-
 
 ### Exp(0.5)
 
@@ -238,7 +233,6 @@ ggplot(data = maxs_df_exp, aes(x = maxs_exp)) +
        title = paste("Sampling Distribution of the \nSample Max when n =", n))
 ```
 
-
 ### Beta(8,2)
 
 ```{r}
@@ -299,26 +293,25 @@ ggplot(data = maxs_df_beta, aes(x = maxs_beta)) +
        title = paste("Sampling Distribution of the \nSample Max when n =", n))
 ```
 
-
-
 ### Table of results
 
 |                      | $\text{N}(\mu = 10, \sigma^2 = 4)$ | $\text{Unif}(\theta_1 = 7, \theta_2 = 13)$ | $\text{Exp}(\lambda = 0.5)$ | $\text{Beta}(\alpha = 8, \beta = 2)$ |
-|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
-| $\text{E}(Y_{min})$  |                7.7                 |                 7.99                           |           0.402                  |              0.646                        |
-| $\text{E}(Y_{max})$  |                12.3                |                 12.0                           |           4.56                 |         0.922                             |
+|:--------------------:|:----------------------------------:|:------------------------------------------:|:---------------------------:|:------------------------------------:|
+| $\text{E}(Y_{min})$  |                7.7                 |                    7.99                    |            0.402            |                0.646                 |
+| $\text{E}(Y_{max})$  |                12.3                |                    12.0                    |            4.56             |                0.922                 |
 |                      |                                    |                                            |                             |                                      |
-| $\text{SE}(Y_{min})$ |                1.35                |               8.59                             |       0.396                     |          0.108                            |
-| $\text{SE}(Y_{max})$ |                1.38                |                  8.4                          |         2.41                  |             0.0465                         |
+| $\text{SE}(Y_{min})$ |                1.35                |                    8.59                    |            0.396            |                0.108                 |
+| $\text{SE}(Y_{max})$ |                1.38                |                    8.4                     |            2.41             |                0.0465                |
 
 : Table of Results {.striped .hover}
 
-## Questions 
+## Questions
 
-### 1. Compare the SE from the sampling distribution of the maximum and the minimum for these distributions 
-For both the normal and uniform distributions, the standard errors are quite similar, with the uniform having a slightly higher SE for the sampling distribution of the minimum compared to the maximum. The last two (Exponential and Beta) have Standard Errors that differ greatly between the two sampling distributions. Looking at exponential, there is a clearly higher SE produced from the sampling distribution of the maximum compared to the minimum. Similarly the difference between the SEs of the sampling distributions corresponsing to the beta distribution is high (with respect to the smallness of the SEs) with a higher SE($y_{min}$).These results suggest that perhaps when a distribution is symmetric (like the normal and uniform), the Standard Errors for the sampling distributions of the sample minimum and maximum will be close to equivalent. From these results I don't believe that any conclusion or rule can be made on an non-symmetric distribution, like the beta and exponential. 
+### 1. Compare the SE from the sampling distribution of the maximum and the minimum for these distributions
 
-### 2. Find the pdf of the min and max for the exponential distribution 
+For both the normal and uniform distributions, the standard errors are quite similar, with the uniform having a slightly higher SE for the sampling distribution of the minimum compared to the maximum. The last two (Exponential and Beta) have Standard Errors that differ greatly between the two sampling distributions. Looking at exponential, there is a clearly higher SE produced from the sampling distribution of the maximum compared to the minimum. Similarly the difference between the SEs of the sampling distributions corresponsing to the beta distribution is high (with respect to the smallness of the SEs) with a higher SE($y_{min}$).These results suggest that perhaps when a distribution is symmetric (like the normal and uniform), the Standard Errors for the sampling distributions of the sample minimum and maximum will be close to equivalent. From these results I don't believe that any conclusion or rule can be made on an non-symmetric distribution, like the beta and exponential.
+
+### 2. Find the pdf of the min and max for the exponential distribution
 
 $f_{min} = n(1-F(y))^{n-1}*f(y)$
 
@@ -361,8 +354,8 @@ ggplot(data = samp_max_df, aes(x = x_max, y = density)) +
   theme_minimal()
 ```
 
-Theoretical expected value for this pdf is around 4.5666 
+Theoretical expected value for this pdf is around 4.5666
 
 Theoretical standard error for this pdf is around 2.432
 
-I found that the simulated values are quite close to my calculated theoretical values. There is some slight variation between the theoretical and simulated values, but the majority (besides SE($y_{min}$)) are identical down to the tenths place. 
+I found that the simulated values are quite close to my calculated theoretical values. There is some slight variation between the theoretical and simulated values, but the majority (besides SE($y_{min}$)) are identical down to the tenths place.
